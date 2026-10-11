@@ -13,3 +13,8 @@ def load_config(config_dir: Path) -> tuple[dict, dict]:
     settings = load_json(config_dir / "settings.json")
     tax_rates = load_json(config_dir / "tax_rates.json")["rates"]
     return settings, tax_rates
+
+
+def load_discount_codes(config_dir: Path) -> dict:
+    path = config_dir / "discounts.json"
+    return load_json(path)["codes"] if path.exists() else {}
