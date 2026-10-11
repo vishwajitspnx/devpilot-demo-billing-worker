@@ -27,6 +27,10 @@ def invoice_totals(invoice: dict, tax_rates: dict, discount_codes: dict | None =
     if invoice.get("discount_code"):
         discount = money(discount_for(subtotal, invoice["discount_code"], discount_codes or {}))
     net = subtotal - discount
-    tax = money(net * Decimal(str(tax_rates[country])))
+    rate = Decimal(str(tax_rates[country]))
+    if discount:
+        # the discounted price as printed on the receipt, tax included
+        net = money(net * (1 + rate))
+    tax = money(net * rate)
     return {"invoice": invoice["id"], "country": country, "subtotal": subtotal, "discount": discount,
             "tax": tax, "total": net + tax}
