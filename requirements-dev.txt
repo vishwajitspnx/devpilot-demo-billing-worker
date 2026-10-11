@@ -1,0 +1,2 @@
+# The worker itself only uses the Python standard library.
+pytest==8.3.5
