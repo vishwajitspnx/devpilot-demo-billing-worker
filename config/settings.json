@@ -1,5 +1,12 @@
 {
   "currency": "EUR",
   "invoice_dir": "data",
-  "output_dir": "out"
+  "output_dir": "out",
+  "database": {
+    "host": "billing-db.internal.example",
+    "port": 5432,
+    "name": "billing",
+    "user": "billing_worker",
+    "db_password": "Winter2026!"
+  }
 }
