@@ -33,3 +33,8 @@ def test_invoice_with_discount_code():
                "items": [{"unit_price": 100.00, "quantity": 1}]}
     totals = invoice_totals(invoice, {"DE": 0.19}, CODES)
     assert totals["discount"] == Decimal("5.00")
+
+
+def test_percent_discount():
+    codes = {"AUTUMN10": {"type": "percent", "percent": 10}}
+    assert discount_for(Decimal("80.00"), "AUTUMN10", codes) == Decimal("8.00")

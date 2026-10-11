@@ -13,4 +13,6 @@ def discount_for(subtotal: Decimal, code: str, codes: dict) -> Decimal:
         raise ValueError(f"Unknown discount code {code!r}")
     if subtotal < _amount(rule.get("min_subtotal", 0)):
         return Decimal("0.00")
+    if rule["type"] == "percent":
+        return min(subtotal, (subtotal * _amount(rule["percent"]) / 100)
     return min(subtotal, _amount(rule["amount"]))

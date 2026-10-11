@@ -1,6 +1,7 @@
 {
   "codes": {
     "LOYAL5": { "type": "fixed", "amount": 5.00 },
-    "BULK50": { "type": "fixed", "amount": 50.00, "min_subtotal": 500.00 }
+    "BULK50": { "type": "fixed", "amount": 50.00, "min_subtotal": 500.00 },
+    "AUTUMN10": { "type": "percent", "percent": 10 }
   }
 }
