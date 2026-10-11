@@ -1,0 +1,10 @@
+{
+  "id": "INV-1002",
+  "customer": "Liffey Coffee Ltd",
+  "country": "IE",
+  "issued": "2026-10-03",
+  "items": [
+    { "sku": "BEANS-1", "description": "Coffee beans, 1 kg", "unit_price": 21.50, "quantity": 3 },
+    { "sku": "CUPS-50", "description": "Paper cups, pack of 50", "unit_price": 4.125, "quantity": 2 }
+  ]
+}

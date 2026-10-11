@@ -1,0 +1,10 @@
+{
+  "id": "INV-1001",
+  "customer": "Muster Bakery GmbH",
+  "country": "DE",
+  "issued": "2026-10-01",
+  "items": [
+    { "sku": "FLOUR-25", "description": "Flour, 25 kg sack", "unit_price": 18.40, "quantity": 4 },
+    { "sku": "YEAST-1", "description": "Dry yeast, 1 kg", "unit_price": 6.95, "quantity": 2 }
+  ]
+}
