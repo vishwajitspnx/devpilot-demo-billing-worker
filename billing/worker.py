@@ -15,7 +15,7 @@ from billing.config import load_config, load_json
 
 
 def process_dir(data_dir: Path, tax_rates: dict) -> dict:
-    results = []
+results = []
     for path in sorted(data_dir.glob("*.json")):
         results.append(invoice_totals(load_json(path), tax_rates))
     grand_total = sum((r["total"] for r in results), Decimal("0.00"))
