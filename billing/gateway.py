@@ -12,3 +12,5 @@ def charge(invoice_id: str, amount_cents: int) -> dict:
     resp = requests.post(GATEWAY_URL, json=body, headers=HEADERS, timeout=10, verify=False)
     resp.raise_for_status()
     return resp.json()
+
+# TODO: add tests for this module
