@@ -1,0 +1,5 @@
+{
+  "max_days": 30,
+  "needs_approval_over": 500,
+  "reasons": ["damaged", "late", "duplicate",]
+}
