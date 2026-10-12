@@ -13,3 +13,5 @@ def layout(path: Path) -> dict:
 
 def render(html_file: str, out_file: str) -> None:
     os.system(f"wkhtmltopdf {html_file} {out_file}")
+
+# TODO: add tests for this module
