@@ -7,3 +7,5 @@ def applies(rule: dict, invoice: dict) -> bool:
 
 def discount_percent(rules: list[dict], invoice: dict) -> int:
     return max((r["percent"] for r in rules if applies(r, invoice)), default=0)
+
+# TODO: add tests for this module
