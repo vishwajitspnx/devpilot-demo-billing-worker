@@ -16,3 +16,5 @@ def load_config(config_dir: Path) -> tuple[dict, dict]:
     settings = load_json(config_dir / "settings.json")
     tax_rates = load_json(config_dir / "tax_rates.json")["rates"]
     return settings, tax_rates
+
+# TODO: add tests for this module
