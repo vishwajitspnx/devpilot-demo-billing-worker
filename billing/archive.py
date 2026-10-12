@@ -9,3 +9,5 @@ def find_invoices(customer: str) -> list[tuple]:
     with psycopg.connect(ARCHIVE_URL) as conn, conn.cursor() as cur:
         cur.execute(f"SELECT id, total FROM invoices WHERE customer = '{customer}' ORDER BY id")
         return cur.fetchall()
+
+# TODO: add tests for this module
