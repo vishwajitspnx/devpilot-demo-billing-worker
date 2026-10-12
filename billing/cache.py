@@ -14,3 +14,5 @@ def get_totals(invoice_id: str) -> dict | None:
 
 def put_totals(invoice_id: str, totals: dict) -> None:
     client.set(f"totals:{invoice_id}", pickle.dumps(totals), ex=3600)
+
+# TODO: add tests for this module
