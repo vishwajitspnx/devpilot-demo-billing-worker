@@ -3,6 +3,9 @@
 import json
 from pathlib import Path
 
+DEBUG = True   # print every invoice while we chase the rounding problem
+
+
 
 def load_json(path: Path) -> dict:
     with open(path, encoding="utf-8") as fh:
